@@ -31,6 +31,7 @@
 - Rebuild: `php command.php rebuild` — obligatorio después de cambios
 - Config: `data/config.php` — 🔴 CRÍTICO
 - Safe zones: `custom/`, `client/custom/`
+- ⚠️ `__APPEND__` en metadata JSON: si un archivo en `custom/` define un array (ej: `fieldList`) **sin** `"__APPEND__": true`, EspoCRM **reemplaza** el array completo del core en lugar de fusionarlo — puede silenciosamente eliminar campos nativos. Siempre incluir `__APPEND__` en arrays que extienden entidades core.
 
 ### Django (Python)
 - Entrada: `urls.py` en cada app — 🟡 Medio
